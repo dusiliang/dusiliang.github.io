@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
 <meta name="title" content="PRML"/>
 <meta name="generator" content="Org-mode"/>
-<meta name="generated" content="2015-07-27T22:05+0800"/>
+<meta name="generated" content="2015-08-05T09:18+0800"/>
 <meta name="author" content="Dusiliang"/>
 <meta name="description" content=""/>
 <meta name="keywords" content=""/>
@@ -134,6 +134,8 @@ for the JavaScript code in this tag.
 </ul>
 </li>
 <li><a href="#sec-1-3">The Curse of Dimensionality</a></li>
+<li><a href="#sec-1-4">Desicion Boundary</a></li>
+<li><a href="#sec-1-5">Three approaches to solving decision problem</a></li>
 </ul>
 </li>
 </ul>
@@ -152,8 +154,8 @@ for the JavaScript code in this tag.
 <h3 id="sec-1-1">Probability Theory</h3>
 <div class="outline-text-3" id="text-1-1">
 
-<p>Bayesion: MAP: maximizing the posterior distribution, is equivalet to 
-Frequence: minimiziing the regularized sum-of-squares error function
+<p>   ??????????????? Bayesion: MAP: maximizing the posterior distribution, is equivalet to 
+   Frequence: minimiziing the regularized sum-of-squares error function
 </p>
 </div>
 
@@ -204,17 +206,67 @@ Frequence: minimiziing the regularized sum-of-squares error function
 <h3 id="sec-1-3">The Curse of Dimensionality</h3>
 <div class="outline-text-3" id="text-1-3">
 
+
+</div>
+
+</div>
+
+<div id="outline-container-1-4" class="outline-3">
+<h3 id="sec-1-4">Desicion Boundary</h3>
+<div class="outline-text-3" id="text-1-4">
+
+<p>   p(Ck): prior probability, p(Ck|x): posterior probability
+</p>
+<ul>
+<li>Minimizing the misclassification rate
+
+</li>
+<li>loss/cost function. Or maximize the value of utility function.
+
+</li>
+<li>avoid making decisions on the difficult cases. can easily extend to minizing the expected
+</li>
+</ul>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-1-5" class="outline-3">
+<h3 id="sec-1-5">Three approaches to solving decision problem</h3>
+<div class="outline-text-3" id="text-1-5">
+
+
+<ul>
+<li>generative model: infer p(x|Ck) and p(Ck), then p(Ck | x) or p(x, Ck) by Bayesion Theorem, then use decision theory
+</li>
+<li>discriminative model: infer p(Ck | x), then use decision theory
+</li>
+<li>discriminate function: y = f(x)
+</li>
+</ul>
+
 </div>
 </div>
 </div>
 </div>
 
 <div id="postamble">
-<p class="date">Date: 2015-07-27T22:05+0800</p>
-<p class="author">Author: Dusiliang</p>
-<p class="creator"><a href="http://orgmode.org">Org</a> version 7.9.3f with <a href="http://www.gnu.org/software/emacs/">Emacs</a> version 24</p>
-<a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
+<div id="disqus_thread "></div>
+                          <script type="text/javascript ">
+                          /* * * CONFIGURATION VARIABLES * * */
+                          var disqus_shortname = 'maxwellsimpleblog';
 
+                          /* * * DON'T EDIT BELOW THIS LINE * * */
+                          (function() {
+                                   var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                                   dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                                   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                                   })();
+                          </script>
+                          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript "
+                                    rel="nofollow ">comments powered by Disqus.</a></noscript>
 </div>
 </body>
 </html>
