@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2015-08-05 Wed 15:21 -->
+<!-- 2015-08-14 Fri 09:27 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="viewport" content="width=device-width, initial-scale=1" />
 <title></title>
@@ -148,7 +148,7 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgheadline10">Introduction</a>
+<li><a href="#orgheadline12">Introduction</a>
 <ul>
 <li><a href="#orgheadline1">Probability Theory</a></li>
 <li><a href="#orgheadline6">Model Selection</a>
@@ -162,19 +162,21 @@ for the JavaScript code in this tag.
 <li><a href="#orgheadline7">The Curse of Dimensionality</a></li>
 <li><a href="#orgheadline8">Desicion Boundary</a></li>
 <li><a href="#orgheadline9">Three approaches to solving decision problem</a></li>
+<li><a href="#orgheadline10">Reasons for computing the posterior probability</a></li>
+<li><a href="#orgheadline11">Loss function for regression</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgheadline10" class="outline-2">
-<h2 id="orgheadline10">Introduction</h2>
-<div class="outline-text-2" id="text-orgheadline10">
+<div id="outline-container-orgheadline12" class="outline-2">
+<h2 id="orgheadline12">Introduction</h2>
+<div class="outline-text-2" id="text-orgheadline12">
 </div><div id="outline-container-orgheadline1" class="outline-3">
 <h3 id="orgheadline1">Probability Theory</h3>
 <div class="outline-text-3" id="text-orgheadline1">
 <p>
-??????????????? Bayesion: MAP: maximizing the posterior distribution, is equivalet to 
+Bayesion: MAP: maximizing the posterior distribution, is equivalet to ?
 Frequence: minimiziing the regularized sum-of-squares error function
 </p>
 </div>
@@ -223,8 +225,35 @@ p(Ck): prior probability, p(Ck|x): posterior probability
 <div class="outline-text-3" id="text-orgheadline9">
 <ul class="org-ul">
 <li>generative model: infer p(x|Ck) and p(Ck), then p(Ck | x) or p(x, Ck) by Bayesion Theorem, then use decision theory</li>
-<li>discriminative model: infer p(Ck | x), then use decision theory</li>
+<li>discriminative model: infer p(Ck | x), then use decision theory
+the way to get p(Ck | x): assume a distribute for P(Ck | x), train, get parameters of the distribution</li>
 <li>discriminate function: y = f(x)</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline10" class="outline-3">
+<h3 id="orgheadline10">Reasons for computing the posterior probability</h3>
+<div class="outline-text-3" id="text-orgheadline10">
+<ul class="org-ul">
+<li>minimizing risk when loss matrix be modified</li>
+<li>reject option</li>
+<li>compensating for class priors, for a unbalance dataset
+<ol class="org-ol">
+<li>take the posterior P(Ck | X) probabilities from a balanced data set</li>
+<li>P(Ck | X) / P(Ck), P(Ck) is for the balanced data set</li>
+<li>P(Ck | X) / P(Ck) * P<sub>o</sub>(Ck), P<sub>o</sub>(Ck) is for original data set</li>
+</ol></li>
+<li id="combining models">P(Ck | X1, X2) ~ P(X1, X2 | Ck) * P(Ck) = P(X1 | Ck) * P(X2 | Ck) * P(Ck) ~ P(Ck | X1) * P(Ck | X2) / P(Ck)</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline11" class="outline-3">
+<h3 id="orgheadline11">Loss function for regression</h3>
+<div class="outline-text-3" id="text-orgheadline11">
+<ul class="org-ul">
+<li>the regression function: y(x) = Et[t|x]</li>
 </ul>
 </div>
 </div>
