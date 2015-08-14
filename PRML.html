@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2015-08-14 Fri 09:27 -->
+<!-- 2015-08-14 Fri 09:30 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="viewport" content="width=device-width, initial-scale=1" />
 <title></title>
@@ -148,30 +148,23 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgheadline12">Introduction</a>
+<li><a href="#orgheadline8">Introduction</a>
 <ul>
 <li><a href="#orgheadline1">Probability Theory</a></li>
-<li><a href="#orgheadline6">Model Selection</a>
-<ul>
-<li><a href="#orgheadline2">validation set</a></li>
-<li><a href="#orgheadline3">cross-validation</a></li>
-<li><a href="#orgheadline4">AIC: Akaike Information Criterion</a></li>
-<li><a href="#orgheadline5">BIC: Bayesion Information Criterion</a></li>
-</ul>
-</li>
-<li><a href="#orgheadline7">The Curse of Dimensionality</a></li>
-<li><a href="#orgheadline8">Desicion Boundary</a></li>
-<li><a href="#orgheadline9">Three approaches to solving decision problem</a></li>
-<li><a href="#orgheadline10">Reasons for computing the posterior probability</a></li>
-<li><a href="#orgheadline11">Loss function for regression</a></li>
+<li><a href="#orgheadline2">Model Selection</a></li>
+<li><a href="#orgheadline3">The Curse of Dimensionality</a></li>
+<li><a href="#orgheadline4">Desicion Boundary</a></li>
+<li><a href="#orgheadline5">Three approaches to solving decision problem</a></li>
+<li><a href="#orgheadline6">Reasons for computing the posterior probability</a></li>
+<li><a href="#orgheadline7">Loss function for regression</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgheadline12" class="outline-2">
-<h2 id="orgheadline12">Introduction</h2>
-<div class="outline-text-2" id="text-orgheadline12">
+<div id="outline-container-orgheadline8" class="outline-2">
+<h2 id="orgheadline8">Introduction</h2>
+<div class="outline-text-2" id="text-orgheadline8">
 </div><div id="outline-container-orgheadline1" class="outline-3">
 <h3 id="orgheadline1">Probability Theory</h3>
 <div class="outline-text-3" id="text-orgheadline1">
@@ -182,30 +175,25 @@ Frequence: minimiziing the regularized sum-of-squares error function
 </div>
 </div>
 
-<div id="outline-container-orgheadline6" class="outline-3">
-<h3 id="orgheadline6">Model Selection</h3>
-<div class="outline-text-3" id="text-orgheadline6">
-</div><div id="outline-container-orgheadline2" class="outline-4">
-<h4 id="orgheadline2">validation set</h4>
-</div>
-<div id="outline-container-orgheadline3" class="outline-4">
-<h4 id="orgheadline3">cross-validation</h4>
-</div>
-<div id="outline-container-orgheadline4" class="outline-4">
-<h4 id="orgheadline4">AIC: Akaike Information Criterion</h4>
-</div>
-<div id="outline-container-orgheadline5" class="outline-4">
-<h4 id="orgheadline5">BIC: Bayesion Information Criterion</h4>
+<div id="outline-container-orgheadline2" class="outline-3">
+<h3 id="orgheadline2">Model Selection</h3>
+<div class="outline-text-3" id="text-orgheadline2">
+<ul class="org-ul">
+<li>validation set</li>
+<li>cross-validation</li>
+<li>AIC: Akaike Information Criterion</li>
+<li>BIC: Bayesion Information Criterion</li>
+</ul>
 </div>
 </div>
 
-<div id="outline-container-orgheadline7" class="outline-3">
-<h3 id="orgheadline7">The Curse of Dimensionality</h3>
+<div id="outline-container-orgheadline3" class="outline-3">
+<h3 id="orgheadline3">The Curse of Dimensionality</h3>
 </div>
 
-<div id="outline-container-orgheadline8" class="outline-3">
-<h3 id="orgheadline8">Desicion Boundary</h3>
-<div class="outline-text-3" id="text-orgheadline8">
+<div id="outline-container-orgheadline4" class="outline-3">
+<h3 id="orgheadline4">Desicion Boundary</h3>
+<div class="outline-text-3" id="text-orgheadline4">
 <p>
 p(Ck): prior probability, p(Ck|x): posterior probability
 </p>
@@ -220,9 +208,9 @@ p(Ck): prior probability, p(Ck|x): posterior probability
 </div>
 </div>
 
-<div id="outline-container-orgheadline9" class="outline-3">
-<h3 id="orgheadline9">Three approaches to solving decision problem</h3>
-<div class="outline-text-3" id="text-orgheadline9">
+<div id="outline-container-orgheadline5" class="outline-3">
+<h3 id="orgheadline5">Three approaches to solving decision problem</h3>
+<div class="outline-text-3" id="text-orgheadline5">
 <ul class="org-ul">
 <li>generative model: infer p(x|Ck) and p(Ck), then p(Ck | x) or p(x, Ck) by Bayesion Theorem, then use decision theory</li>
 <li>discriminative model: infer p(Ck | x), then use decision theory
@@ -232,9 +220,9 @@ the way to get p(Ck | x): assume a distribute for P(Ck | x), train, get paramete
 </div>
 </div>
 
-<div id="outline-container-orgheadline10" class="outline-3">
-<h3 id="orgheadline10">Reasons for computing the posterior probability</h3>
-<div class="outline-text-3" id="text-orgheadline10">
+<div id="outline-container-orgheadline6" class="outline-3">
+<h3 id="orgheadline6">Reasons for computing the posterior probability</h3>
+<div class="outline-text-3" id="text-orgheadline6">
 <ul class="org-ul">
 <li>minimizing risk when loss matrix be modified</li>
 <li>reject option</li>
@@ -249,9 +237,9 @@ the way to get p(Ck | x): assume a distribute for P(Ck | x), train, get paramete
 </div>
 </div>
 
-<div id="outline-container-orgheadline11" class="outline-3">
-<h3 id="orgheadline11">Loss function for regression</h3>
-<div class="outline-text-3" id="text-orgheadline11">
+<div id="outline-container-orgheadline7" class="outline-3">
+<h3 id="orgheadline7">Loss function for regression</h3>
+<div class="outline-text-3" id="text-orgheadline7">
 <ul class="org-ul">
 <li>the regression function: y(x) = Et[t|x]</li>
 </ul>
